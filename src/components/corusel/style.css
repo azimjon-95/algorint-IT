@@ -1,0 +1,162 @@
+/* *************section3*********** */
+.onlinekurs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: gray; */
+    padding: 20px 50px;
+}
+
+.onlinekurs>p {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #070707;
+}
+
+.div_kurslar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.online_kurs {
+    width: 250px;
+    height: 360px;
+
+    background: #ffffff;
+    /* border: 0.1px solid #000000; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 5px;
+    background-size: cover;
+}
+
+.video_link {
+    width: 200px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#f7b51d, #333);
+
+    border-radius: 8px;
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+
+/* media responsiv */
+/* @media (max-width: 1280px) {
+    .oquvkurslari {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 8% 10px 0 10px;
+    }
+
+    .onlinekurs {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .sec_l {
+        width: 50%;
+        height: 356px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sec_l>p {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 63px;
+        text-align: center;
+
+        color: #ffffff;
+    }
+
+    .sec_r>img {
+        width: 80%;
+    }
+
+    .section1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 54px 100px;
+        background: linear-gradient(254.2deg, #00dbde 0%, #121c43 108.49%);
+    }
+} */
+
+@media (max-width: 500px) {
+    .online_kurs {
+        width: 140px;
+        height: 200px;
+        padding: 20px 0px;
+        margin: 8px 0;
+
+    }
+
+    .onlinekurs {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: gray; */
+        padding: 20px 20px;
+    }
+
+    .online_kurs>a {
+        width: 95px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .onlinekurs>p {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 28px;
+
+        color: #070707;
+    }
+}
+
+@media (max-width: 400px) {
+    .online_kurs {
+        width: 125px;
+        height: 170px;
+    }
+
+    .online_kurs>a {
+        width: 95px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
