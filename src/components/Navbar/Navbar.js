@@ -25,13 +25,13 @@ export const Navbar = () => {
 
   const scrollUp = () => {
     window.scrollTo({
-      top: 670,
+      top: 590,
       behavior: "smooth",
     });
   };
   const scrollbottom = () => {
     window.scrollTo({
-      top: 1770,
+      top: 1670,
       behavior: "smooth",
     });
   };

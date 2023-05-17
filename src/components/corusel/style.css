@@ -150,6 +150,19 @@
 
 @media (max-width: 400px) {
     .online_kurs {
+        width: 145px;
+        height: 180px;
+    }
+
+    .online_kurs>a {
+        width: 95px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .online_kurs {
         width: 125px;
         height: 170px;
     }
