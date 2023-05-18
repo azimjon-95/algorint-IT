@@ -44,7 +44,28 @@ nav .logo {
   /* justify-content: space-around; */
 }
 
+.lincs>a {
+  height: auto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+
 .lincs>button>img {
+  margin-right: 11px;
+  width: 17px;
+  height: 17px;
+}
+
+.lincs>a>img {
   margin-right: 11px;
   width: 17px;
   height: 17px;
@@ -67,7 +88,7 @@ nav>.profil>button {
   margin-left: 11px;
 }
 
-.lincs>button:last-child img:last-child {
+.lincs>a:last-child img:last-child {
   display: none;
 }
 
@@ -126,6 +147,24 @@ nav>.profil>button {
     display: none;
   }
 
+  .lincs>a {
+    height: auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 29px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+  }
+
+  .lincs>a>img {
+    display: none;
+  }
+
   nav>.profil {
     display: none;
   }
@@ -153,6 +192,15 @@ nav>.profil>button {
   }
 
   .lincs>button:last-child img:last-child {
+    display: block;
+    transform: scale(1.2);
+  }
+
+  .lincs>a:last-child span {
+    display: none;
+  }
+
+  .lincs>a:last-child img:last-child {
     display: block;
     transform: scale(1.2);
   }

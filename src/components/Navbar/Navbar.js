@@ -52,11 +52,11 @@ export const Navbar = () => {
             <img src={menu} alt="" />
             Biz haqimizda
           </button>
-          <button>
+          <a href="tel:+998973701818">
             <img src={menu} alt="" />
             <span>Biz bilan aloqa</span>
             <img src={phone} alt="" />
-          </button>
+          </a>
         </div>
         {/* <div className="profil">
           <button onClick={() => setOpen(true)}>

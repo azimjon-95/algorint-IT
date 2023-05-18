@@ -10,6 +10,7 @@ import Features from "../Features/Features";
 import Corusel from "../corusel/Corusel";
 import Kurslar from "../Kurslar/Kurslar";
 import Contact from "../contact/Contact";
+import Msg from "../msg/Msg";
 
 
 export const Home = () => {
@@ -29,6 +30,8 @@ export const Home = () => {
       <Features />
       <Contact />
       <Footer />
+
+      <Msg />
     </>
   );
 };
