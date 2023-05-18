@@ -18,12 +18,28 @@
     padding-top: 8px;
 }
 
-.footer_box a {
-    text-decoration: none;
-    color: rgb(200, 200, 200);
+.footer_box>button {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    color: rgb(178, 178, 178);
+    border: none;
     font-size: 15px;
     cursor: pointer;
     margin: 4px 0;
+}
+
+.footer_box>a {
+    text-decoration: none;
+    color: rgb(178, 178, 178);
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+.footer_box button:hover {
+    text-decoration: underline;
 }
 
 .footer_box a:hover {
@@ -65,7 +81,7 @@
 }
 
 .first h1 {
-    background: -webkit-linear-gradient(#f7b51d, #333);
+    background: -webkit-linear-gradient(#ffc232, rgb(97, 97, 97));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-left: 7px;

@@ -96,10 +96,11 @@
 .regis {
     padding: 4px 15px;
     border: none;
-    background: linear-gradient(#f7b51d, #333);
+    /* background: linear-gradient(#f7b51d, #333); */
+    background-color: #fcd401;
     color: white;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     /* position: relative;
     z-index: 3; */
 }

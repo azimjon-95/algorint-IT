@@ -1,11 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import './FooterStyles.css'
 import logo from '../../asets/footer/logo.png'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { AiFillYoutube, AiFillInstagram } from 'react-icons/ai'
-// import { footerData, footerSocialData } from '../../data/FooterData';
 
 function Footer() {
+	const [backToTopButton, setBackToTopButton] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 200) {
+				setBackToTopButton(true);
+			} else {
+				setBackToTopButton(false);
+			}
+		});
+	}, []);
+
+	const scrollUp = () => {
+		window.scrollTo({
+			top: 660,
+			behavior: "smooth",
+		});
+	};
+	const scrollbottom = () => {
+		window.scrollTo({
+			top: 1220,
+			behavior: "smooth",
+		});
+	};
+	const scrolltop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
+	const scrollFAQ = () => {
+		window.scrollTo({
+			top: 2100,
+			behavior: "smooth",
+		});
+	};
 	return (
 		<div className='F_box'>
 			<div className="Footer_cont">
@@ -13,7 +48,7 @@ function Footer() {
 					<h1><img width={70} src={logo} alt="" /> Algoritm</h1>
 					<div className='call'>
 						<b>📞Telefon raqami:</b>
-						<a href="tel:+998788889888">+998 (78) 888 9 888</a>
+						<a href="tel:+998973701818">+998 (97) 370 1 818</a>
 					</div>
 					<div className='call'>
 						<b>🧭Manzil:</b>
@@ -28,23 +63,25 @@ function Footer() {
 				</div>
 				<div className="footer_box">
 					<b>Ma'lumotlar</b>
-					<a href="">FAQ</a>
-					<a href="">Blog</a>
-					<a href="">Ommaviy oferta</a>
+					<button onClick={scrollFAQ} >FAQ</button>
+					<button onClick={scrollbottom}>Blog</button>
+					<button onClick={scrolltop}>Ommaviy oferta</button>
 				</div>
 				<div className="footer_box">
 					<b>Ommabop Kurslar</b>
-					<a href="">Web dasturlash</a>
-					<a href="">Ingilz tili</a>
-					<a href="">Rus tili</a>
-					<a href="">DTM</a>
+					<button onClick={scrollUp}>Web dasturlash</button>
+					<button onClick={scrollUp}>Ingilz tili</button>
+					<button onClick={scrollUp}>Rus tili</button>
+					<button onClick={scrollUp}>DTM</button>
 
 				</div>
 				<div className="footer_box">
 					<b>Bizning Loyihalar</b>
-					<a href="">Houzing</a>
-					<a href="">Olma.uz</a>
-					<a href="">Fusafo.uz</a>
+					<a href="https://houzing-demo.netlify.app/" >Houzing</a>
+					<a href="" >-</a>
+					<a href="" >-</a>
+					<a href="" >-</a>
+					<a href="" >-</a>
 				</div>
 
 			</div>

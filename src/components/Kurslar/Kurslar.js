@@ -9,12 +9,10 @@ import reactjs from "../../asets/section2/reactjs.svg";
 import nodejs from "../../asets/section2/nodejs.svg";
 import { Register } from "../pages/Register/Register";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
-import Aos from "aos";
+
 
 const Kurslar = () => {
-    useEffect(() => {
-        Aos.init({ duration: 500 });
-    }, []);
+
     const [open, setOpen] = useState(false);
     // navigate
 

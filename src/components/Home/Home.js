@@ -13,9 +13,9 @@ import Contact from "../contact/Contact";
 
 
 export const Home = () => {
-  useEffect(() => {
-    Aos.init({ duration: 500 });
-  }, []);
+  // useEffect(() => {
+  //   Aos.init({ duration: 500 });
+  // }, []);
 
 
   return (

@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './FeaturesStyles.css'
 import { FaUserGraduate } from 'react-icons/fa';
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
+
 const Features = () => {
 
-	const toggle2 = () => setModal2(!modal2);
-	const toggle3 = () => setModal3(!modal3);
 	const [modal2, setModal2] = useState(false);
 	const [modal3, setModal3] = useState(false);
+	const toggle2 = () => setModal2(!modal2);
+	const toggle3 = () => setModal3(!modal3);
+
 	return (
 
-		<div div className='Containers'>
+		<div className='Containers'>
 
 			<h3 className='FeatureTitle'>Natijalar</h3>
 
@@ -36,7 +38,7 @@ const Features = () => {
 				<Modal isOpen={modal2} toggle={toggle2}>
 					<ModalHeader toggle={toggle2}>IT Web dasturlash darslari raqamlarda: </ModalHeader>
 					<ModalBody>
-						Web dasturlash (kurslari). O'quv kurslari 2019 yil Mart oyida tashkil etilgan. 2019-2023 yil May oyigacha AT da 1500 dan ortiq o'quvchilar Web dasturlash kurslarini to'liq o'qib sertifikat olib bitirishgan. 2022 yilda 5/4  o'quvchi Web dasturlash kurslarida talim olgan va ulardan 4/6 nafari darslarni muvoffaqiyatli tamomlagan. Ulardan 120 dan ortig'i, yani 30% ishlarga joylashib o'z o'rnilarini topishgan, 250 dan ortig'i maktab o'quvchilari va ularning 80% algoritm IT labaratoriyasida loyihalar bilan amaliyot o'tishmoqda. Masalan eng faol o'quvchilarimizdan Ibrohim Jalolov, Amerikaning "Aveks dizayn" kompaniyasining toshkentdagi filialida senior dasturchi sifatida faoliyat yuritmoqda. 2023 yilda "ALGORITM" 100 nafar yoshlarga IT Web dasturlash ni o'rganishni maqsad qilgan.
+						Web dasturlash (kurslari). O'quv kurslari 2019 yil Mart oyida tashkil etilgan. 2019-2023 yil May oyigacha IT da 1500 dan ortiq o'quvchilar Web dasturlash kurslarini to'liq o'qib sertifikat olib bitirishgan. 2022 yilda 5/4  o'quvchi Web dasturlash kurslarida talim olgan va ulardan 4/6 nafari darslarni muvoffaqiyatli tamomlagan. Ulardan 120 dan ortig'i, yani 30% ishlarga joylashib o'z o'rnilarini topishgan, 250 dan ortig'i maktab o'quvchilari va ularning 80% algoritm IT labaratoriyasida loyihalar bilan amaliyot o'tishmoqda. Masalan eng faol o'quvchilarimizdan Ibrohim Jalolov, Amerikaning "Aveks dizayn" kompaniyasining toshkentdagi filialida senior dasturchi sifatida faoliyat yuritmoqda. 2023 yilda "ALGORITM" 100 nafar yoshlarga IT Web dasturlash ni o'rgatishni maqsad qilgan.
 					</ModalBody>
 				</Modal>
 				<Modal isOpen={modal3} toggle={toggle3}>
