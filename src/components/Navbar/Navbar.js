@@ -58,16 +58,9 @@ export const Navbar = () => {
             <img src={phone} alt="" />
           </a>
         </div>
-        {/* <div className="profil">
-          <button onClick={() => setOpen(true)}>
-            Profil
-            <img src={user} alt="" />
-          </button>
-        </div> */}
+
       </nav>
-      <div className="register_modol" style={open ? { display: "flex" } : {}}>
-        <Register setOpen={setOpen} />
-      </div>
+
     </>
   );
 };
