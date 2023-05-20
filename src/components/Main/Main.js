@@ -24,10 +24,9 @@ export const Main = () => {
     Aos.init({ duration: 500 });
   }, []);
 
-  const names = [
-    'Mutaxassislardan', "Algoritm Ta'lim da", 'Mutaxassislardan', "Algoritm Ta'lim da", 'Mutaxassislardan', "Algoritm Ta'lim da", 'Mutaxassislardan', "Algoritm Ta'lim da", 'Mutaxassislardan', "Algoritm Ta'lim da", 'Mutaxassislardan', "Algoritm Ta'lim da"
+  const iT = [
+    "IT", "Ingliz tili", "Rus tili"
   ]
-
 
   // const [index, setIndex] = useState(0)
   // useEffect(() => {
@@ -66,10 +65,11 @@ export const Main = () => {
       <div className="sec_l">
 
         <span className="logo_title-flex">
-          <p className="logo_title">Kasblarni</p>
+          <p className="logo_title">Algoritm Ta'lim da</p>
           <p className="logo_title t_left">
             <Typewriter
-              words={names}
+              words={iT}
+              loop
               typeSpeed={90}
               deleteSpeed={90}
               delaySpeed={1000}

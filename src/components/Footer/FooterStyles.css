@@ -119,11 +119,37 @@
     color: #fff;
 }
 
-/* 
-.logo h1 {
-    color: #f7b51d; 
-background: -webkit-linear-gradient(#f7b51d, #333);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-margin-left: 10px;
-}*/
+@media (max-width: 370px) {
+    .first {
+        width: 100%;
+        align-items: center;
+    }
+
+    .call {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 7px 0;
+    }
+
+    .call p {
+        text-align: center;
+    }
+
+    .tarmoqlar {
+        justify-content: center;
+    }
+
+    .tarmoqlar a {
+        margin-left: 10px;
+    }
+
+    .tarmoqlar a:nth-child(1) {
+        margin-left: 0px;
+    }
+
+    .footer_links p {
+        text-align: center;
+    }
+}

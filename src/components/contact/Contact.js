@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import dsp from '../../asets/footer/ss.jpg'
 import { PatternFormat } from "react-number-format";
+import Aos from "aos";
 
 
 export const Contact = () => {
@@ -27,16 +28,22 @@ export const Contact = () => {
     api.open("GET", tempUrl, true);
     api.send();
   }
+  useEffect(() => {
+    Aos.init({ duration: 700 });
+  }, []);
   return (
     <div className="Container_Contact">
       <div className="con_box">
-        <img src={dsp} alt="" />
+        <div data-aos="zoom-in-right" className="con_box-img">
+          <img src={dsp} alt="" />
+        </div>
       </div>
       <div className="con_box">
-        <h2>Savolingiz bormi?</h2>
-        <p>Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq qilamiz va birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz.</p>
+        <h2 data-aos="zoom-in-right">Savolingiz bormi?</h2>
+        <p data-aos="zoom-in-right">Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq qilamiz va birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz.</p>
         <form onSubmit={sendMsgToBot} className="from">
           <PatternFormat
+            data-aos="zoom-in-right"
             required
             format="+998 (##) ### ####"
             allowEmptyFormatting
@@ -46,7 +53,7 @@ export const Contact = () => {
               setFormData({ ...formData, number: e.target.value })
             }
           />
-          <textarea value={formData.savol}
+          <textarea data-aos="zoom-in-right" value={formData.savol}
             onChange={(e) =>
               setFormData({ ...formData, savol: e.target.value })
             } name="" id="" cols="30" rows="4"></textarea>

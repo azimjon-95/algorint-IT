@@ -14,9 +14,9 @@ import Msg from "../msg/Msg";
 
 
 export const Home = () => {
-  // useEffect(() => {
-  //   Aos.init({ duration: 500 });
-  // }, []);
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
 
 
   return (

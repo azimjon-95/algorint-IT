@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import './FeaturesStyles.css'
 import { FaUserGraduate } from 'react-icons/fa';
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
-
+import Aos from "aos";
 
 const Features = () => {
-
+	useEffect(() => {
+		Aos.init({ duration: 700 });
+	}, []);
 	const [modal2, setModal2] = useState(false);
 	const [modal3, setModal3] = useState(false);
 	const toggle2 = () => setModal2(!modal2);
@@ -13,20 +15,20 @@ const Features = () => {
 
 	return (
 
-		<div className='Containers'>
+		<div data-aos="flip-left" className='Containers'>
 
 			<h3 className='FeatureTitle'>Natijalar</h3>
 
 			<div className='FeatureWrapper'>
 
-				<div onClick={toggle2} className='FeatureColumn'>
+				<div data-aos="flip-left" onClick={toggle2} className='FeatureColumn'>
 					<div className='FeatureImageWrapper'>
 						<FaUserGraduate />
 					</div>
 					<h3 className='FeatureName'>Web Dasturlash</h3>
 					<p className='FeatureText'>Bizning o'quvchilar nufuzli IT kompaniyalarda ishlashmoqda</p>
 				</div>
-				<div onClick={toggle3} className='FeatureColumn'>
+				<div data-aos="flip-left" onClick={toggle3} className='FeatureColumn'>
 					<div className='FeatureImageWrapper'>
 						<FaUserGraduate />
 					</div>

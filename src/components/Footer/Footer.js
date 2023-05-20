@@ -3,6 +3,7 @@ import './FooterStyles.css'
 import logo from '../../asets/footer/logo.png'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { AiFillYoutube, AiFillInstagram } from 'react-icons/ai'
+import Aos from "aos";
 
 function Footer() {
 	const [backToTopButton, setBackToTopButton] = useState(false);
@@ -40,11 +41,13 @@ function Footer() {
 			top: 2100,
 			behavior: "smooth",
 		});
-	};
+	}; useEffect(() => {
+		Aos.init({ duration: 700 });
+	}, []);
 	return (
 		<div className='F_box'>
 			<div className="Footer_cont">
-				<div className="first">
+				<div className="first" data-aos="zoom-in-right">
 					<h1><img width={70} src={logo} alt="" /> Algoritm</h1>
 					<div className='call'>
 						<b>📞Telefon raqami:</b>
@@ -61,13 +64,13 @@ function Footer() {
 						<a href="https://t.me/algoritm_edu"><FaTelegramPlane /></a>
 					</div>
 				</div>
-				<div className="footer_box">
+				<div data-aos="zoom-in-right" className="footer_box">
 					<b>Ma'lumotlar</b>
 					<button onClick={scrollFAQ} >FAQ</button>
 					<button onClick={scrollbottom}>Blog</button>
 					<button onClick={scrolltop}>Ommaviy oferta</button>
 				</div>
-				<div className="footer_box">
+				<div data-aos="zoom-in-right" className="footer_box">
 					<b>Ommabop Kurslar</b>
 					<button onClick={scrollUp}>Web dasturlash</button>
 					<button onClick={scrollUp}>Ingilz tili</button>
@@ -75,7 +78,7 @@ function Footer() {
 					<button onClick={scrollUp}>DTM</button>
 
 				</div>
-				<div className="footer_box">
+				<div data-aos="zoom-in-right" className="footer_box">
 					<b>Bizning Loyihalar</b>
 					<a href="https://houzing-demo.netlify.app/" >Houzing</a>
 					<a href="" >-</a>
@@ -87,7 +90,8 @@ function Footer() {
 			</div>
 			<div className="footer_links">
 				<p>© Algorithm Ta'lim, 2023
-					Barcha huquqlar himoyalangan.</p>
+					Barcha huquqlar himoyalangan.
+				</p>
 			</div>
 		</div>
 	)

@@ -4,13 +4,10 @@ import React, { memo, useState, useEffect } from "react";
 import "./navbar.css";
 import logo from "../../asets/nav/Vector.png";
 import menu from "../../asets/nav/menu.svg";
-import user from "../../asets/nav/user.svg";
-import { Register } from "../pages/Register/Register";
 
 import phone from '../../asets/nav/phone2.png'
 
 export const Navbar = () => {
-  const [open, setOpen] = useState(false);
   const [backToTopButton, setBackToTopButton] = useState(false);
 
   useEffect(() => {

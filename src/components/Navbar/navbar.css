@@ -92,6 +92,7 @@ nav>.profil>button {
   display: none;
 }
 
+
 /* medya */
 
 @media (max-width: 1024px) {
@@ -132,7 +133,7 @@ nav>.profil>button {
   .lincs>button {
     height: auto;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 29px;
     color: #ffffff;
     background: none;
@@ -177,7 +178,8 @@ nav>.profil>button {
   }
 
   .lincs>button {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 500;
   }
 
 }
@@ -202,6 +204,6 @@ nav>.profil>button {
 
   .lincs>a:last-child img:last-child {
     display: block;
-    transform: scale(1.2);
+    transform: scale(1.6);
   }
 }

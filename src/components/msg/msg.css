@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: flex-end;
   position: fixed;
-
   right: 40px;
   bottom: 62px;
   z-index: 4;
@@ -80,8 +79,8 @@
   .msg {
     width: 55px;
     height: 200px;
-    right: 15px;
-    bottom: 75px;
+    right: 30px;
+    bottom: 40px;
   }
 
   .Back_To-Top {
@@ -101,6 +100,10 @@
   .msg_show::before,
   .msg_show::after {
     height: 51px;
+  }
+
+  .msg_show svg {
+    font-size: 23px;
   }
 
   .msg_result>button {
