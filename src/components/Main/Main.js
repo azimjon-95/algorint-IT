@@ -75,7 +75,7 @@ export const Main = () => {
               delaySpeed={1000}
             /></p>
         </span>
-        <p className="logo_title"> o‘rganing</p>
+        <p className="logo_title top_left"> o‘rganing</p>
 
         <div className="video">
           <video src={video} autoPlay controls muted loop></video>

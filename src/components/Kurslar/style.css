@@ -392,6 +392,20 @@
 
 }
 
+@media (max-width: 440px) {
+    .register {
+        position: fixed;
+        top: 10%;
+        left: 12%;
+        z-index: 5;
+        width: 302px;
+        z-index: 6;
+        background: #ffd52d98;
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+    }
+}
+
 @media (max-width: 400px) {
     .register {
         position: fixed;

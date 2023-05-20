@@ -148,6 +148,19 @@
     }
 }
 
+@media (max-width: 440px) {
+    .online_kurs {
+        width: 165px;
+        height: 200px;
+    }
+
+    .online_kurs>a {
+        width: 95px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 400px) {
     .online_kurs {
         width: 145px;

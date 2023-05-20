@@ -35,6 +35,11 @@ const Kurslar = () => {
         kurs: "",
     });
 
+    const ref = React.useRef(null);
+
+    const onClear = () => {
+        ref.current.value = "";
+    };
     const sendMsgToBot = async (e) => {
 
         e.preventDefault()
@@ -285,11 +290,12 @@ const Kurslar = () => {
                         value={formData.name}
                         onChange={(e) =>
                             setFormData({ ...formData, name: e.target.value })
-                        }
+                        } ref={ref}
                         type="text"
                         placeholder="ism"
                     />
                     <PatternFormat
+
                         required
                         format="+998 (##) ### ####"
                         allowEmptyFormatting
@@ -314,7 +320,7 @@ const Kurslar = () => {
                         <option value="Ingliz-tili">Ingliz-tili</option>
                         <option value="DTM">DTM</option>
                     </select>
-                    <button >
+                    <button onClick={onClear}>
                         Login
                     </button>
                 </form>
