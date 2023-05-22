@@ -3,9 +3,11 @@ import "./style.css";
 import dsp from '../../asets/footer/ss.jpg'
 import { PatternFormat } from "react-number-format";
 import Aos from "aos";
-
+import LoadingSpinnerButton from '../leadingBtn/LoadingSpinnerButton'
 
 export const Contact = () => {
+  const [loading, setLoading] = useState(false)
+
   const [formData, setFormData] = useState({
     number: "",
     savol: ""
@@ -27,6 +29,11 @@ export const Contact = () => {
     let api = new XMLHttpRequest();
     api.open("GET", tempUrl, true);
     api.send();
+
+    setFormData({
+      number: "",
+      savol: ""
+    })
   }
   useEffect(() => {
     Aos.init({ duration: 700 });
@@ -57,7 +64,13 @@ export const Contact = () => {
             onChange={(e) =>
               setFormData({ ...formData, savol: e.target.value })
             } name="" id="" cols="30" rows="4"></textarea>
-          <button type="submit">So‘rov yuborish</button>
+          {/* <button type="submit">So‘rov yuborish</button> */}
+          <LoadingSpinnerButton loading={loading} onClick={() => {
+            setLoading(true)
+            setTimeout(() => {
+              setLoading(false)
+            }, 2000)
+          }} />
         </form>
       </div>
     </div>

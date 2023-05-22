@@ -14,7 +14,7 @@ import Eng from '../../asets/section2/ingliz tili 1.png'
 import Dtm from '../../asets/section2/DTM.png'
 import Aos from "aos";
 import { PatternFormat } from "react-number-format";
-
+import LoadingSpinnerButton from '../leadingBtn/LoadingSpinnerButton'
 const Kurslar = () => {
     useEffect(() => {
         Aos.init({ duration: 700 });
@@ -26,7 +26,7 @@ const Kurslar = () => {
     const [modal2, setModal2] = useState(false);
     const [modal3, setModal3] = useState(false);
     const [modal4, setModal4] = useState(false);
-
+    const [loading, setLoading] = useState(false)
 
 
     const [formData, setFormData] = useState({
@@ -35,14 +35,11 @@ const Kurslar = () => {
         kurs: "",
     });
 
-    const ref = React.useRef(null);
 
-    const onClear = () => {
-        ref.current.value = "";
-    };
+
     const sendMsgToBot = async (e) => {
 
-        e.preventDefault()
+        e.preventDefault("")
         let aaa = `👤<b> O'quvchi ro'yxatdan o'tdi</b>%0A%0A <b>Ismi</b>: ${formData.name}%0A%0A ☎️ Tel: ${formData.number}%0A ✉️ Kurs: ${formData.kurs}%0A `
 
         // let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
@@ -55,7 +52,18 @@ const Kurslar = () => {
         let api = new XMLHttpRequest();
         api.open("GET", tempUrl, true);
         api.send();
+
+
+        setFormData({
+            name: "",
+            number: "",
+            kurs: "",
+        })
     }
+
+    const onClear = () => {
+
+    };
     return (
         <>
             <div data-aos="fade-up" className="oquvkurslari">
@@ -170,9 +178,6 @@ const Kurslar = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="register_modol" style={open ? { display: "flex" } : {}}>
-                <Register setOpen={setOpen} />
-            </div> */}
 
             <div onClick={() => setModal(false)} className="noneDsp" style={modal ? { display: "block" } : { display: "none" }}></div>
             <div onClick={() => setModal2(false)} className="noneDsp" style={modal2 ? { display: "block" } : { display: "none" }}></div>
@@ -290,7 +295,7 @@ const Kurslar = () => {
                         value={formData.name}
                         onChange={(e) =>
                             setFormData({ ...formData, name: e.target.value })
-                        } ref={ref}
+                        }
                         type="text"
                         placeholder="ism"
                     />
@@ -311,6 +316,7 @@ const Kurslar = () => {
                         onChange={(e) =>
                             setFormData({ ...formData, kurs: e.target.value })
                         }
+
                         name=""
                         id=""
                     >
@@ -320,13 +326,21 @@ const Kurslar = () => {
                         <option value="Ingliz-tili">Ingliz-tili</option>
                         <option value="DTM">DTM</option>
                     </select>
-                    <button onClick={onClear}>
-                        Login
-                    </button>
+
+
+
+
+                    <LoadingSpinnerButton loading={loading} onClick={() => {
+                        setLoading(true)
+                        setTimeout(() => {
+                            setLoading(false)
+                        }, 2000)
+                    }} />
                 </form>
             </div>
         </>
     )
+
 }
 
 export default Kurslar

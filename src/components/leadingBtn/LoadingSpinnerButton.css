@@ -1,0 +1,33 @@
+.loading-spinner-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.loading-spinner-button:hover {
+    box-shadow: 10px 10px 5px 129px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 10px 10px 5px 129px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 10px 10px 5px 129px rgba(0, 0, 0, 0.1) inset;
+}
+
+.loading-spinner-button>img {
+    width: 40px;
+    margin: 0.5rem;
+}
+
+.loading-spinner-button>svg {
+    font-size: 22px;
+    margin-left: 5px;
+}
+
+
+@media (max-width: 440px) {
+    .loading-spinner-button>img {
+        width: 24px;
+        margin: 0.5rem;
+    }
+}
