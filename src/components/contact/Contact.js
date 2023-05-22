@@ -19,11 +19,11 @@ export const Contact = () => {
     e.preventDefault()
     let aaa = `👤<b> O'quvchi xabar qoldirdi</b>%0A%0A ☎️ Tel: ${formData.number}%0A ✉️ Habar: ${formData.savol}%0A `
 
-    // let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
-    // let chatId = "39464759"; // Azimjon
+    let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
+    let chatId = "39464759"; // Azimjon
 
-    let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
-    let chatId = "1986279045"; // Diyorbek
+    // let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
+    // let chatId = "1986279045"; // Diyorbek
 
     let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${aaa}&parse_mode=html`;
     let api = new XMLHttpRequest();
@@ -61,6 +61,7 @@ export const Contact = () => {
             }
           />
           <textarea data-aos="zoom-in-right" value={formData.savol}
+            placeholder="Savol qoldiring..."
             onChange={(e) =>
               setFormData({ ...formData, savol: e.target.value })
             } name="" id="" cols="30" rows="4"></textarea>

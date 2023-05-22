@@ -89,7 +89,7 @@ function Footer() {
 
 			</div>
 			<div className="footer_links">
-				<p>© Algorithm Ta'lim, 2023
+				<p>© Algoritm Ta'lim, 2023
 					Barcha huquqlar himoyalangan.
 				</p>
 			</div>
