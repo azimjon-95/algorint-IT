@@ -193,31 +193,31 @@ const Kurslar = () => {
                     <div className="webdiv">
                         <img src={html} alt="" />
 
-                        <p>HTML</p>
+                        <b>HTML</b>
                     </div>
                     <div className="webdiv">
                         <img src={css} alt="" />
-                        <p>CSS</p>
+                        <b>CSS</b>
                     </div>
                     <div className="webdiv">
                         <img src={boot} alt="" />
 
-                        <p>BOOSTRAP</p>
+                        <b>BOOSTRAP</b>
                     </div>
                     <div className="webdiv">
                         <img src={js} alt="" />
 
-                        <p>JAVASCRIPT</p>
+                        <b>JAVASCRIPT</b>
                     </div>
                     <div className="webdiv">
                         <img src={reactjs} alt="" />
 
-                        <p>REACT JS</p>
+                        <b>REACT JS</b>
                     </div>
                     <div className="webdiv">
                         <img src={nodejs} alt="" />
 
-                        <p>NODE JS</p>
+                        <b>NODE JS</b>
                     </div>
                 </div>
             </div>
@@ -227,7 +227,7 @@ const Kurslar = () => {
                     <h1 onClick={() => setModal2(false)}>+</h1>
                 </div>
                 <div className="Info_box">
-                    ALGORITM da rus tilini o'rgatish dasturi 3 bosqichdan iborat: 3+3+17 оу 1-bosqich 3 oу davom etadi va unda dastlabki eng muhim mavzularda so'zlashish, to'g'ri talaffuz va to'g'ri gapirish qoidalari o'rgatiladi. 2-bosqich ham 3 оу davom etadi va bu bosqichda o'quvchilarga markaz binosida o'zbek tilida so'zlashish taqiqlab qo'yiladi. 2-bosqichda o'quvchilar mavzularni rus tilida amaliy tarzda bajarishlari belgilangan. Masalan, kurs uchun to'lov qilish rus tilida amalga oshiriladi   va bankdan kredit olish rus tilida bankga borib gaplashiladi yoki dorixonadan rus tilida dori sotib olish kabi. 3-bosqich 1 oу davom etadi va unda o'quvchining sohasiga oid bo'lgan mavzularda so'zlashish o'rgatiladi. Masalan, quruvchi bo'lsangiz qurilishga oid, shifokor bo'lsangiz bemorlarni qabul qilishga oid, matematika fakulteti talabasi bo'lsangiz, rus tilida matematika darsini o'tishni o'rganasiz.
+                    ALGORITM da rus tilini o'rgatish dasturi 3 bosqichdan iborat: 3+3+17 оу 1-bosqich 3 oу davom etadi va unda dastlabki eng muhim mavzularda so'zlashish, to'g'ri talaffuz qilish va to'g'ri gapirish qoidalari o'rgatiladi. 2-bosqich ham 3 оу davom etadi va bu bosqichda o'quvchilarga markaz binosida o'zbek tilida so'zlashish taqiqlab qo'yiladi. 2-bosqichda o'quvchilar mavzularni rus tilida amaliy tarzda bajarishlari belgilangan. Masalan, kurs uchun to'lov qilish rus tilida amalga oshiriladi   va bankdan kredit olish rus tilida bankga borib gaplashiladi yoki dorixonadan rus tilida dori sotib olish kabi. 3-bosqich 1 oу davom etadi va unda o'quvchining sohasiga oid bo'lgan mavzularda so'zlashish o'rgatiladi. Masalan, quruvchi bo'lsangiz qurilishga oid, shifokor bo'lsangiz bemorlarni qabul qilishga oid, matematika fakulteti talabasi bo'lsangiz, rus tilida matematika darsini o'tishni o'rganasiz.
                 </div>
             </div>
             <div className="model_box" style={modal3 ? { display: "block" } : { display: "none" }}>
@@ -236,7 +236,7 @@ const Kurslar = () => {
                     <h1 onClick={() => setModal3(false)}>+</h1>
                 </div>
                 <div className="Info_box">
-                    ALGORITM o'quv markazida INGLIZ TILINI O'RGATISH  dasturi 5 bosqichdan iborat: 3+3+3+3+3 15 oy. 1-bosqich 3 oу davom etadi va unda sodda grammatik mavzular, READING va LiSTENING bo'yicha kitoblar berilib, dastlabki tushunchalar o'rgatiladi. 2-bosqich ham 3 оу, unda mavzular murakkablashadi, o'quvchining nutqi shakllantiriladi, darslarning yarmi o'zbekcha, yarmi inglizcha olib boriladi. 3-bosqich 3 оу, unda o'zbek tilida gapirish taqiqlanadi. Bu bosqichda o'quvchi ingliz tilida erkin muloqot qila oladigan darajaga yetadi. 4-bosqich 3 оу, unda ingliz grammatikasi to'la yakunlanadi. READING va LISTENING qobiliyatlari ADVANCED darajasiga chiqadi. 5-bosqich 5 оу bo'ladi. Unda o'quvchi IELTS imtixoniga Reading, Listening, Writing, Speaking bo'limlariga maxsus xolatda tayyorgarlik ko' radi. Darslar har kuni olib boriladi. O'quvchilar o'qituvchi nazoratida o'quv markazi hududida tayyorgarlik olib borishadi. Har 3 oyda imtixon, unda 90% dan yuqori natija ko'rsatgan , keyingi bosqichda o'qiy oladi.
+                    ALGORITM o'quv markazida INGLIZ TILINI O'RGATISH  dasturi 5 bosqichdan iborat: 3+3+3+3+3 15 oy. 1-bosqich 3 oу davom etadi va unda sodda grammatik mavzular, READING va LiSTENING bo'yicha kitoblar berilib, dastlabki tushunchalar o'rgatiladi. 2-bosqich ham 3 оу, unda mavzular murakkablashadi, o'quvchining nutqi shakllantiriladi, darslarning yarmi o'zbek tilida, yarmi ingliz tilida olib boriladi. 3-bosqich 3 оу, unda o'zbek tilida gapirish taqiqlanadi. Bu bosqichda o'quvchi ingliz tilida erkin muloqot qila oladigan darajaga yetadi. 4-bosqich 3 оу, unda ingliz grammatikasi to'la yakunlanadi. READING va LISTENING qobiliyatlari ADVANCED darajasiga chiqadi. 5-bosqich 5 оу bo'ladi. Unda o'quvchi IELTS imtixoniga Reading, Listening, Writing, Speaking bo'limlariga maxsus xolatda tayyorgarlik ko' radi. Darslar har kuni olib boriladi. O'quvchilar o'qituvchi nazoratida o'quv markazi hududida tayyorgarlik olib borishadi. Har 3 oyda imtixon, unda 80% dan yuqori natija ko'rsatgan , keyingi bosqichda o'qiy oladi.
                 </div>
             </div>
             <div className="model_box" style={modal4 ? { display: "block" } : { display: "none" }}>

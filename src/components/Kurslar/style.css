@@ -115,6 +115,7 @@
 #modal {
     width: 100%;
     display: flex;
+    overflow: auto;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 5;
@@ -396,6 +397,25 @@
         backdrop-filter: blur(3px);
         border-radius: 20px;
     }
+
+    .webdiv {
+        width: 100px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #efd300;
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 2px;
+        margin: 3%;
+    }
+
+    .webdiv>img {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 400px) {
