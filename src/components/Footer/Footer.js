@@ -80,11 +80,11 @@ function Footer() {
 				</div>
 				<div data-aos="zoom-in-right" className="footer_box">
 					<b>Bizning Loyihalar</b>
+					<a href="https://xalqarologistika.uz/" >Xalqarologistika.uz</a>
 					<a href="https://houzing-demo.netlify.app/" >Houzing</a>
-					<a href="" >-</a>
-					<a href="" >-</a>
-					<a href="" >-</a>
-					<a href="" >-</a>
+					<a href="https://www.crm-edu.uz/" >Crm-edu.uz</a>
+					<a href="https://www.mustang-shoes.uz/page/1" >Mustang-shoes.uz</a>
+					<a href="https://abdullajonovich.vercel.app/" >Azimjon.uz</a>
 				</div>
 
 			</div>
