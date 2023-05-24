@@ -4,8 +4,6 @@ import "./msg.css";
 import { FiPhoneCall } from "react-icons/fi";
 
 
-
-
 function Msg() {
   const [open, setOpen] = useState(false);
   const [backToTopButton, setBackToTopButton] = useState(false);

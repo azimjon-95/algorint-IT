@@ -3,9 +3,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 85px;
+  padding: 20px 65px;
   font-family: sans-serif;
   background: #ffd42d;
+  overflow: hidden;
   /* background: linear-gradient(254.2deg, #00dbde 0%, #121c43 108.49%); */
 }
 
@@ -23,11 +24,13 @@ nav .logo {
   margin-right: 11px;
 }
 
+
+
 .lincs {
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .lincs>button {
@@ -41,7 +44,11 @@ nav .logo {
   cursor: pointer;
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
+
+}
+
+.call_icon {
+  display: none;
 }
 
 .lincs>a {
@@ -92,6 +99,83 @@ nav>.profil>button {
   display: none;
 }
 
+.register-Nav {
+  display: none;
+}
+
+.hamburger_bar {
+  display: none;
+}
+
+.mobile_con {
+  display: none;
+}
+
+
+.back_none {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.308);
+}
+
+.mobile_con {
+  display: none;
+}
+
+.btns_nav {
+  background-color: #ffd42d;
+  padding: 5px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btns_nav button a {
+  text-decoration: none;
+  color: #000000;
+
+}
+
+.btns_nav button {
+  margin: 5px 0;
+  display: flex;
+  font-size: 17px;
+  justify-content: flex-start;
+  border: none;
+  color: #000000;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btns_nav button:focus {
+  color: #ff0000;
+}
+
+
+.GrMenu {
+  width: 45px;
+  height: 30px;
+  font-size: 25px;
+  margin-left: 6px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: 0.5s;
+}
+
+.GrMenu>svg {
+  font-size: 35px;
+  transform: rotate(45deg);
+  color: #ffffff;
+}
+
+.GrMenu img {
+  width: 30px;
+}
 
 /* medya */
 
@@ -182,6 +266,56 @@ nav>.profil>button {
     font-weight: 500;
   }
 
+  .hamburger_bar {
+    width: 190px;
+    height: 100vh;
+    background: #ffd42d;
+    border-top: 1px solid rgba(180, 180, 180, 0.724);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 60px;
+    position: fixed;
+    right: 0;
+    transition: all 5s;
+    z-index: 6;
+  }
+
+  .mobile_con {
+    display: block;
+    display: flex;
+    transition: all 5s;
+  }
+
+  .register-Nav {
+    display: block;
+    padding: 2px 12px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .hamburger_bar {
+    display: block;
+  }
+
+  .hamburger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .lincs {
+    display: none;
+  }
 }
 
 /* @media screen and (max-width:374px) { */

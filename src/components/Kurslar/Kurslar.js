@@ -15,11 +15,11 @@ import Dtm from '../../asets/section2/DTM.png'
 import Aos from "aos";
 import { PatternFormat } from "react-number-format";
 import LoadingSpinnerButton from '../leadingBtn/LoadingSpinnerButton'
-const Kurslar = () => {
+const Kurslar = ({ open, setOpen }) => {
     useEffect(() => {
         Aos.init({ duration: 700 });
     }, []);
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
 
     const [modal, setModal] = useState(false);
@@ -42,11 +42,11 @@ const Kurslar = () => {
         e.preventDefault("")
         let aaa = `👤<b> O'quvchi ro'yxatdan o'tdi</b>%0A%0A <b>Ismi</b>: ${formData.name}%0A%0A ☎️ Tel: ${formData.number}%0A ✉️ Kurs: ${formData.kurs}%0A `
 
-        // let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
-        // let chatId = "39464759"; // Azimjon
+        let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
+        let chatId = "39464759"; // Azimjon
 
-        let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
-        let chatId = "1986279045"; // Diyorbek
+        // let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
+        // let chatId = "1986279045"; // Diyorbek
 
         let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${aaa}&parse_mode=html`;
         let api = new XMLHttpRequest();

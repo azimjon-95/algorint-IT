@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Navbar } from "../Navbar/Navbar";
 import "./home.css";
@@ -14,17 +14,17 @@ import Msg from "../msg/Msg";
 
 
 export const Home = () => {
-  useEffect(() => {
-    Aos.init({ duration: 500 });
-  }, []);
+  const [open, setOpen] = useState(false);
+
+
 
 
   return (
     <>
       <div className="main">
-        <Navbar />
+        <Navbar setOpen={setOpen} />
         <Main />
-        <Kurslar />
+        <Kurslar open={open} setOpen={setOpen} />
         <Corusel />
       </div>
       <Features />
