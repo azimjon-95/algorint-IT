@@ -200,7 +200,7 @@
 
 .register {
     position: fixed;
-    top: 10%;
+    top: 20%;
     left: 35%;
     z-index: 5;
     width: 332px;
@@ -388,7 +388,7 @@
 @media (max-width: 440px) {
     .register {
         position: fixed;
-        top: 10%;
+        top: 20%;
         left: 12%;
         z-index: 5;
         width: 302px;
@@ -421,7 +421,7 @@
 @media (max-width: 400px) {
     .register {
         position: fixed;
-        top: 10%;
+        top: 20%;
         left: 8%;
         z-index: 5;
         width: 302px;
@@ -439,6 +439,11 @@
         margin: 10px 0;
     }
 
+    .register {
+        position: fixed;
+        top: 20%;
+
+    }
 
     .kusrlar_box {
         width: 100%;
