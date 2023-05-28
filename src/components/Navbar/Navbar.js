@@ -44,22 +44,17 @@ export const Navbar = ({ setOpen }) => {
 
 
         <div className="lincs">
-          <button onClick={scrollUp}>
-            <img src={menu} alt="" />
+          <button className="nav_btns" onClick={scrollUp}>
+
             Kurslar
           </button>
-          <button onClick={scrollbottom}>
-            <img src={menu} alt="" />
+          <button className="nav_btns" onClick={scrollbottom}>
+
             Biz haqimizda
           </button>
           <a href="tel:+998973701818">
-            <img src={menu} alt="" />
-            <span>Biz bilan aloqa</span>
-            <img className="call_icon" src={phone} alt="" />
+            Biz bilan aloqa
           </a>
-
-        </div>
-        <div className="mobile_con">
 
           <button onClick={() => {
             setOpen(true)
@@ -67,18 +62,15 @@ export const Navbar = ({ setOpen }) => {
           }} className="register-Nav">
             Ro'yhatdan o'tish
           </button>
-
           {mobilMenu ?
             <div onClick={() => setMobilMenu(false)} className="GrMenu"><AiOutlinePlus /></div> :
             <div onClick={() => setMobilMenu(true)} className="GrMenu"><img src={menu} alt="" /></div>
           }
-
         </div>
 
-
-
       </nav>
-      <div className='hamburger_bar' style={mobilMenu && !backToTopButton ? { display: "block", transition: 'all 0.5s' } : { display: "none", transition: 'all 0.5s' }}>
+      {/* <div className='hamburger_bar' style={mobilMenu && !backToTopButton ? { display: "block", transition: 'all 0.5s' } : { display: "none", transition: 'all 0.5s' }}> */}
+      <div className={mobilMenu && !backToTopButton ? 'hamburger_bar' : "close"}>
         <div className="btns_nav">
           <button onClick={() => {
             scrollUp()

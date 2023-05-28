@@ -33,12 +33,12 @@ nav .logo {
   justify-content: space-between;
 }
 
-.lincs>button {
+.nav_btns {
   height: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
   line-height: 29px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   background: none;
   border: none;
   cursor: pointer;
@@ -56,53 +56,28 @@ nav .logo {
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
-}
 
-.lincs>button>img {
-  margin-right: 11px;
-  width: 17px;
-  height: 17px;
-}
-
-.lincs>a>img {
-  margin-right: 11px;
-  width: 17px;
-  height: 17px;
-}
-
-nav>.profil>button {
-  display: flex;
-  align-items: center;
-  border: none;
-  font-weight: 400;
-  line-height: 29px;
-  color: #ffffff;
-  background: #28bd2e;
-  border: 1px solid #f9f2f2;
-  border-radius: 10px;
-  padding: 2px 14px;
-}
-
-.profil>button>img {
-  margin-left: 11px;
-}
-
-.lincs>a:last-child img:last-child {
-  display: none;
 }
 
 .register-Nav {
-  display: none;
+  padding: 2px 12px;
+  font-size: 15px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
+
+.close,
 .hamburger_bar {
   display: none;
 }
@@ -122,7 +97,7 @@ nav>.profil>button {
   background-color: rgba(0, 0, 0, 0.308);
 }
 
-.mobile_con {
+.GrMenu {
   display: none;
 }
 
@@ -155,27 +130,6 @@ nav>.profil>button {
 }
 
 
-.GrMenu {
-  width: 45px;
-  height: 30px;
-  font-size: 25px;
-  margin-left: 6px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  transition: 0.5s;
-}
-
-.GrMenu>svg {
-  font-size: 35px;
-  transform: rotate(45deg);
-  color: #ffffff;
-}
-
-.GrMenu img {
-  width: 30px;
-}
 
 /* medya */
 
@@ -214,7 +168,7 @@ nav>.profil>button {
     gap: 40px;
   }
 
-  .lincs>button {
+  .nav_btns {
     height: auto;
     font-weight: 400;
     font-size: 15px;
@@ -228,9 +182,7 @@ nav>.profil>button {
     /* justify-content: space-around; */
   }
 
-  .lincs>button>img {
-    display: none;
-  }
+
 
   .lincs>a {
     height: auto;
@@ -246,9 +198,6 @@ nav>.profil>button {
     /* justify-content: space-around; */
   }
 
-  .lincs>a>img {
-    display: none;
-  }
 
   nav>.profil {
     display: none;
@@ -266,6 +215,7 @@ nav>.profil>button {
     font-weight: 500;
   }
 
+  .close,
   .hamburger_bar {
     width: 190px;
     height: 100vh;
@@ -278,26 +228,49 @@ nav>.profil>button {
     top: 60px;
     position: fixed;
     right: 0;
-    transition: all 5s;
+    transition: all .5s;
     z-index: 6;
   }
 
-  .mobile_con {
-    display: block;
+  .close {
+    transition: all .5s;
+    padding: 10px;
+    transform: translateX(100%);
+  }
+
+  .close .btns_nav {
+    opacity: 0;
+  }
+
+  .GrMenu {
+    width: 45px;
+    height: 30px;
+    font-size: 25px;
+    margin-left: 6px;
+    font-weight: 600;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0.5s;
     transition: all 5s;
   }
 
-  .register-Nav {
-    display: block;
-    padding: 2px 12px;
-    font-size: 15px;
-    border: none;
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-    cursor: pointer;
-    border-radius: 10px;
+  .GrMenu>svg {
+    font-size: 35px;
+    transform: rotate(45deg);
+    color: #ffffff;
   }
+
+  .GrMenu img {
+    width: 30px;
+  }
+
+  .GrMenu {
+    display: block;
+
+  }
+
+
 
   .hamburger_bar {
     display: block;
@@ -313,8 +286,13 @@ nav>.profil>button {
     display: block;
   }
 
-  .lincs {
+  .nav_btns {
     display: none;
+  }
+
+  .lincs a {
+    display: none;
+
   }
 }
 

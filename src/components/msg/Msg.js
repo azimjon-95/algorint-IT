@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
-import "./msg.css";
-// import Inc from "../../assets/icons/insta.png";
-import { FiPhoneCall } from "react-icons/fi";
+import "./style.css";
+import dsp from '../../asets/footer/ss.jpg'
 
 
-function Msg() {
-  const [open, setOpen] = useState(false);
-  const [backToTopButton, setBackToTopButton] = useState(false);
+
+function Msg({ openMsg, setOpenMsg, setOpen }) {
+
+  const [backToTopButton, setBackToTopButton] = useState()
+
+  const ism = localStorage.getItem("usern").toUpperCase()
+
 
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 0) {
         setBackToTopButton(true);
       } else {
         setBackToTopButton(false);
@@ -21,20 +24,20 @@ function Msg() {
 
 
   return (
+    <div onClick={() => {
+      setOpen(false)
+      setOpenMsg(false)
+    }} className={openMsg ? "Background" : "MsgNone"}>
+      <div className="callCenterMsg">
+        <div className="callCenter">
+          <div className="callCenter_img">
+            <img src={dsp} alt="" />
+          </div>
 
-    <div>
-      {backToTopButton && (
-        <div className="msg">
-          <a href="tel:+998973701818"
-            className="msg_btn msg_show"
-          >
-            <FiPhoneCall />
-          </a>
+          <p>{ism} sizning so'rovingiz qabul qilindi, tez orada siz bilan bog'lanamiz.</p>
         </div>
-      )}
+      </div>
     </div>
-
-
   );
 }
 

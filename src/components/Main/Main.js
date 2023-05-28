@@ -28,13 +28,6 @@ export const Main = () => {
     "IT", "Ingliz tili", "Rus tili"
   ]
 
-  // const [index, setIndex] = useState(0)
-  // useEffect(() => {
-  //   if (index == names.length - 1) return
-  //   setTimeout(() => {
-  //     setIndex(index + 1)
-  //   }, 2000);
-  // }, [index])
 
   return (
 

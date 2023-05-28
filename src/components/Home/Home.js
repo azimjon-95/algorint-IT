@@ -10,12 +10,13 @@ import Features from "../Features/Features";
 import Corusel from "../corusel/Corusel";
 import Kurslar from "../Kurslar/Kurslar";
 import Contact from "../contact/Contact";
+import Call from "../msg/Call";
 import Msg from "../msg/Msg";
 
 
 export const Home = () => {
   const [open, setOpen] = useState(false);
-
+  const [openMsg, setOpenMsg] = useState(false);
 
 
 
@@ -24,14 +25,14 @@ export const Home = () => {
       <div className="main">
         <Navbar setOpen={setOpen} />
         <Main />
-        <Kurslar open={open} setOpen={setOpen} />
+        <Kurslar setOpenMsg={setOpenMsg} open={open} setOpen={setOpen} />
         <Corusel />
       </div>
       <Features />
-      <Contact />
+      <Contact setOpenMsg={setOpenMsg} />
       <Footer />
-
-      <Msg />
+      <Call />
+      <Msg openMsg={openMsg} setOpenMsg={setOpenMsg} setOpen={setOpen} />
     </>
   );
 };

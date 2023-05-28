@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "../../asets/nav/Vector.png";
-
-import './style.css'
+import './style.css';
 import html from "../../asets/section2/html5.svg";
 import css from "../../asets/section2/css.svg";
 import boot from "../../asets/section2/bootstrap4.svg";
 import js from "../../asets/section2/js.svg";
 import reactjs from "../../asets/section2/reactjs.svg";
 import nodejs from "../../asets/section2/nodejs.svg";
-import It from '../../asets/section2/it.png'
-import Rus from '../../asets/section2/RUS TILI.png'
-import Eng from '../../asets/section2/ingliz tili 1.png'
-import Dtm from '../../asets/section2/DTM.png'
+import It from '../../asets/section2/it.png';
+import Rus from '../../asets/section2/RUS TILI.png';
+import Eng from '../../asets/section2/ingliz tili 1.png';
+import Dtm from '../../asets/section2/DTM.png';
 import Aos from "aos";
 import { PatternFormat } from "react-number-format";
-import LoadingSpinnerButton from '../leadingBtn/LoadingSpinnerButton'
-const Kurslar = ({ open, setOpen }) => {
+import LoadingSpinnerButton from '../leadingBtn/LoadingSpinnerButton';
+
+const Kurslar = ({ open, setOpen, setOpenMsg }) => {
     useEffect(() => {
         Aos.init({ duration: 700 });
     }, []);
@@ -28,6 +28,7 @@ const Kurslar = ({ open, setOpen }) => {
     const [modal4, setModal4] = useState(false);
     const [loading, setLoading] = useState(false)
 
+    const [disabled, setDisabled] = useState("")
 
     const [formData, setFormData] = useState({
         name: "",
@@ -36,24 +37,25 @@ const Kurslar = ({ open, setOpen }) => {
     });
 
 
-
     const sendMsgToBot = async (e) => {
 
         e.preventDefault("")
         let aaa = `👤<b> O'quvchi ro'yxatdan o'tdi</b>%0A%0A <b>Ismi</b>: ${formData.name}%0A%0A ☎️ Tel: ${formData.number}%0A ✉️ Kurs: ${formData.kurs}%0A `
 
-        // let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
-        // let chatId = "39464759"; // Azimjon
+        let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
+        let chatId = "39464759"; // Azimjon
 
-        let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
-        let chatId = "1986279045"; // Diyorbek
+        // let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
+        // let chatId = "1986279045"; // Diyorbek
 
         let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${aaa}&parse_mode=html`;
         let api = new XMLHttpRequest();
         api.open("GET", tempUrl, true);
         api.send();
 
-
+        setTimeout(() => {
+            setOpenMsg(true)
+        }, 3500)
         setFormData({
             name: "",
             number: "",
@@ -61,9 +63,7 @@ const Kurslar = ({ open, setOpen }) => {
         })
     }
 
-    const onClear = () => {
 
-    };
     return (
         <>
             <div data-aos="fade-up" className="oquvkurslari">
@@ -260,6 +260,7 @@ const Kurslar = ({ open, setOpen }) => {
                         <img src={logo} alt="" />
                     </div>
                     <input
+
                         required
                         value={formData.name}
                         onChange={(e) =>
@@ -268,6 +269,7 @@ const Kurslar = ({ open, setOpen }) => {
                         type="text"
                         placeholder="ism"
                     />
+
                     <PatternFormat
 
                         required
@@ -285,7 +287,6 @@ const Kurslar = ({ open, setOpen }) => {
                         onChange={(e) =>
                             setFormData({ ...formData, kurs: e.target.value })
                         }
-
                         name=""
                         id=""
                     >
@@ -299,10 +300,13 @@ const Kurslar = ({ open, setOpen }) => {
 
 
 
-                    <LoadingSpinnerButton loading={loading} onClick={() => {
+                    <LoadingSpinnerButton formData={disabled} loading={loading} onClick={() => {
                         setLoading(true)
+                        localStorage.setItem("usern", formData.name)
                         setTimeout(() => {
                             setLoading(false)
+                            setOpen(false)
+
                         }, 2000)
                     }} />
                 </form>
