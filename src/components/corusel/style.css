@@ -48,7 +48,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#f7b51d, #333);
+    /* background: linear-gradient(#f7b51d, #333); */
+    background: #ffe100;
 
     border-radius: 8px;
     color: white;
@@ -60,12 +61,13 @@
 
 @media (max-width: 500px) {
     .online_kurs {
-        width: 140px;
-        height: 200px;
+        width: 160px;
+        height: 210px;
         padding: 20px 0px;
         margin: 8px 0;
 
     }
+
 
     .onlinekurs {
         width: 100%;
@@ -91,14 +93,23 @@
 
         color: #070707;
     }
+
+    .video_link {
+        width: 280px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(#f7b51d, rgb(125, 101, 103));
+
+        border-radius: 8px;
+        color: white;
+        border: none;
+        text-decoration: none;
+    }
 }
 
 @media (max-width: 440px) {
-    .online_kurs {
-        width: 165px;
-        height: 200px;
-    }
-
     .online_kurs>a {
         width: 95px;
         height: 30px;
@@ -106,16 +117,50 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
     .online_kurs {
-        width: 145px;
-        height: 180px;
+        width: 174px;
+        height: 210px;
     }
 
+
+}
+
+@media (max-width: 412px) {
+    .online_kurs {
+        width: 174px;
+        height: 210px;
+    }
+
+
+}
+
+@media (max-width: 400px) {
     .online_kurs>a {
         width: 95px;
         height: 30px;
         font-size: 14px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .online_kurs {
+        width: 168px;
+    }
+
+
+}
+
+@media (max-width: 375px) {
+    .online_kurs {
+        width: 155px;
+    }
+}
+
+@media (max-width: 360px) {
+    .online_kurs {
+        width: 155px;
     }
 }
 
@@ -129,5 +174,11 @@
         width: 95px;
         height: 30px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .online_kurs {
+        width: 135px;
     }
 }

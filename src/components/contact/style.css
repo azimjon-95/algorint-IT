@@ -16,14 +16,16 @@
 }
 
 .con_box {
-  width: 420px;
+  width: 450px;
   overflow: hidden;
   margin: 0 15px;
 }
 
 .con_box-img {
   width: 100%;
+  height: 410px;
   border-radius: 20px 0 0 20px;
+  background-color: aqua;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -32,7 +34,7 @@
 
 .con_box-img img {
   width: 100%;
-  height: 10+0%;
+  height: 100%;
 }
 
 .from>input {
@@ -72,7 +74,7 @@
 
 
 
-@media (max-width: 440px) {
+@media (max-width: 450px) {
   .Container_Contact {
     flex-direction: column;
   }
@@ -93,9 +95,14 @@
 
   .con_box-img {
     width: 200px;
-    height: 190px;
+    height: 200px;
     border-radius: 50%;
 
+  }
+
+  .con_box-img img {
+    width: 100%;
+    height: 100%;
   }
 
   .from {

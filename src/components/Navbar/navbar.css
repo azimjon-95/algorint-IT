@@ -27,7 +27,7 @@ nav .logo {
 
 
 .lincs {
-  width: 50%;
+  width: 570px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -143,12 +143,7 @@ nav .logo {
     font-family: sans-serif;
   }
 
-  .lincs {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -161,11 +156,10 @@ nav .logo {
   }
 
   .lincs {
-    justify-content: flex-end;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    gap: 40px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav_btns {
@@ -204,15 +198,17 @@ nav .logo {
   }
 }
 
-
-@media screen and (max-width:440px) {
+@media screen and (max-width:640px) {
   nav {
-    padding: 15px;
-  }
-
-  .lincs>button {
-    font-size: 15px;
-    font-weight: 500;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    font-family: sans-serif;
+    background: #ffd42d;
+    overflow: hidden;
+    /* background: linear-gradient(254.2deg, #00dbde 0%, #121c43 108.49%); */
   }
 
   .close,
@@ -252,23 +248,22 @@ nav .logo {
     align-items: center;
     justify-content: flex-end;
     transition: 0.5s;
-    transition: all 5s;
+
+
   }
 
   .GrMenu>svg {
     font-size: 35px;
     transform: rotate(45deg);
     color: #ffffff;
+
   }
 
-  .GrMenu img {
+  .GrMenu>img {
     width: 30px;
   }
 
-  .GrMenu {
-    display: block;
 
-  }
 
 
 
@@ -294,29 +289,11 @@ nav .logo {
     display: none;
 
   }
-}
 
-/* @media screen and (max-width:374px) { */
-@media screen and (max-width:440px) {
   .lincs {
-    gap: 30px;
-  }
-
-  .lincs>button:last-child span {
-    display: none;
-  }
-
-  .lincs>button:last-child img:last-child {
-    display: block;
-    transform: scale(1.2);
-  }
-
-  .lincs>a:last-child span {
-    display: none;
-  }
-
-  .lincs>a:last-child img:last-child {
-    display: block;
-    transform: scale(1.6);
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

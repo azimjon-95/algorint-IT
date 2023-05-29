@@ -19,15 +19,15 @@
   display: flex;
   cursor: pointer;
   font-size: 30px;
-  color: rgb(54, 54, 54);
+  color: rgb(29, 173, 0);
   align-items: center;
   justify-content: center;
   background: var(--bg-gold);
   border-radius: 50%;
   transition: 0.5s;
   position: relative;
-  background-color: rgb(192, 169, 0);
-  transform: rotate(-115deg);
+  background-color: rgb(223, 197, 0);
+  /* transform: rotate(15deg); */
 }
 
 

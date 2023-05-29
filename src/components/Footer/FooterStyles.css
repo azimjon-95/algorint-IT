@@ -119,7 +119,7 @@
     color: #fff;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 470px) {
     .first {
         width: 100%;
         align-items: center;

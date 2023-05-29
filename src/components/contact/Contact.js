@@ -5,7 +5,7 @@ import { PatternFormat } from "react-number-format";
 import Aos from "aos";
 import LoadingSpinnerButton from '../leadingBtn/LoadingSpinnerButton'
 
-export const Contact = ({ setOpenMsg }) => {
+export const Contact = () => {
   const [loading, setLoading] = useState(false)
 
   const [formData, setFormData] = useState({
@@ -35,11 +35,15 @@ export const Contact = ({ setOpenMsg }) => {
     api.send();
 
     setTimeout(() => {
-      // setOpenMsg(true)
-      if (navigator) {
-        navigator.vibrate([300, 300, 300, 300, 300])
-      }
+      setOpenMsg(true)
+
     }, 3500)
+
+    // const vibrate =()=>{
+    // if (navigator) {
+    //   navigator.vibrate([300, 300, 300, 300, 300])
+    // }
+    // }
 
     setFormData({
       number: "",
