@@ -94,7 +94,8 @@
 }
 
 .regis:nth-child(1) {
-    background-color: #f8a732;
+    /* background-color: #f8a732; */
+    background-color: rgb(14, 83, 233);
     border-radius: 0 5px 5px 5px;
 }
 

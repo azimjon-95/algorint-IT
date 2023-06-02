@@ -63,6 +63,12 @@
     margin: 7px 0;
 }
 
+.call b {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
 .call a {
     margin-left: 20px;
     text-decoration: none;

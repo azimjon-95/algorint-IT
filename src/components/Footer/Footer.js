@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import './FooterStyles.css'
 import logo from '../../asets/footer/logo.png'
-import { FaTelegramPlane } from 'react-icons/fa'
+import { FaTelegramPlane, FaPhoneAlt } from 'react-icons/fa'
 import { AiFillYoutube, AiFillInstagram } from 'react-icons/ai'
+import { TiLocation } from 'react-icons/ti'
 import Aos from "aos";
 
 function Footer() {
@@ -49,13 +50,13 @@ function Footer() {
 			<div className="Footer_cont">
 				<div className="first" data-aos="zoom-in-right">
 					<h1><img width={70} src={logo} alt="" /> Algoritm</h1>
-					<div className='call'>
-						<b>📞Telefon raqami:</b>
-						<a href="tel:+998973701818">+998 (97) 370 1 818</a>
+					<div className='call' >
+						<b> <FaPhoneAlt /> Telefon raqami:</b>
+						<a href="tel:+998973701818">+998 (97) 370 18 18</a>
 					</div>
 					<div className='call'>
-						<b>🧭Manzil:</b>
-						<p>9.Navoiy; Namangan sh. Shirin dunyo yonida</p>
+						<b><TiLocation /> Manzil:</b>
+						<p>Namangan sh. 9.Navoiy, Shirin dunyo yonida</p>
 					</div>
 					<b>Tarmoqlar:</b>
 					<div className="tarmoqlar">

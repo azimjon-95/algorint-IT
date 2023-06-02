@@ -8,7 +8,7 @@ function Msg({ openMsg, setOpenMsg, setOpen }) {
 
   const [backToTopButton, setBackToTopButton] = useState()
 
-  const ism = localStorage.getItem("usern").toUpperCase()
+  const ism = localStorage.getItem("usern")?.toUpperCase()
 
 
 
