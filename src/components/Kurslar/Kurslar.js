@@ -56,6 +56,9 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
         setTimeout(() => {
             setOpenMsg(true)
         }, 3500)
+        setTimeout(() => {
+            setOpenMsg(false)
+        }, 11000)
         setFormData({
             name: "",
             number: "",

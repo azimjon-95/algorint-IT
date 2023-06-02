@@ -36,9 +36,11 @@ export const Contact = ({ setOpenMsg }) => {
 
     setTimeout(() => {
       setOpenMsg(true)
+
     }, 3500)
-
-
+    setTimeout(() => {
+      setOpenMsg(false)
+    }, 11000)
 
     setFormData({
       number: "",
