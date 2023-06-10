@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import { data } from '../../data/CarouselData'
+import { data } from '../../utils/CarouselData'
 
 const Corusel = () => {
     return (

@@ -2,25 +2,6 @@ import React from 'react';
 
 const iconStyle = (Icon) => <Icon />;
 
-export const footerSocialData = [
-	{
-		name: 'Facebook',
-		icon: ,
-	},
-	{
-		name: 'Instagram',
-		icon: ,
-	},
-	{
-		name: 'YouTube',
-		icon: ,
-	},
-	{
-		name: 'Telegram',
-		icon: ,
-	},
-
-];
 
 export const footerData = [
 	{

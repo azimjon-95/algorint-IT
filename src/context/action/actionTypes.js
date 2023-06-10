@@ -1,2 +1,2 @@
-export const MsgOpen = "MsgOpen"
-export const MsgClose = "MsgClose"
+export const LOG_IN = "LOG_IN";
+export const LOG_OUT = "LOG_OUT";

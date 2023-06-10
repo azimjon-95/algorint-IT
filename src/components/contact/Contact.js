@@ -23,11 +23,11 @@ export const Contact = ({ setOpenMsg }) => {
     e.preventDefault()
     let aaa = `<b>O'quvchi xabar qoldirdi</b>%0A%0A 👤 Ismi: ${formData.ism}%0A ☎️ Tel: ${formData.number}%0A ✉️ Habar: ${formData.savol}%0A `
 
-    let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
-    let chatId = "39464759"; // Azimjon
+    // let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
+    // let chatId = "39464759"; // Azimjon
 
-    // let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
-    // let chatId = "1986279045"; // Diyorbek
+    let tokenBot = "5840994316:AAFfs3_OcWooZPBJD1lB2tDfYodRarTJsHA"; // Algoritm
+    const chatId = -1001444460459; // Algoritm
 
     let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${aaa}&parse_mode=html`;
     let api = new XMLHttpRequest();
@@ -100,3 +100,4 @@ export const Contact = ({ setOpenMsg }) => {
   );
 };
 export default Contact;
+

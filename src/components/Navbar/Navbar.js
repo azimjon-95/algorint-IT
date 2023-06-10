@@ -5,6 +5,7 @@ import logo from "../../asets/nav/Vector.png";
 import menu from "../../asets/nav/menu.svg";
 import { AiOutlinePlus } from 'react-icons/ai'
 import phone from '../../asets/nav/phone2.png'
+import { NavLink } from "react-router-dom";
 
 export const Navbar = ({ setOpen }) => {
   const [backToTopButton, setBackToTopButton] = useState(false);
@@ -62,6 +63,11 @@ export const Navbar = ({ setOpen }) => {
           }} className="register-Nav">
             Ro'yhatdan o'tish
           </button>
+          <NavLink to='/login'>
+            <button className="register-person">
+              Tzimga kirish
+            </button>
+          </NavLink>
           {mobilMenu ?
             <div onClick={() => setMobilMenu(false)} className="GrMenu"><AiOutlinePlus /></div> :
             <div onClick={() => setMobilMenu(true)} className="GrMenu"><img src={menu} alt="" /></div>

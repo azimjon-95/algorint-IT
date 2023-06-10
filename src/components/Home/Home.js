@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import { Navbar } from "../Navbar/Navbar";
 import "./home.css";
-import Aos from "aos";
 import "aos/dist/aos.css";
 import Main from '../Main/Main'
 import Footer from "../Footer/Footer";
@@ -19,20 +17,41 @@ export const Home = () => {
   const [openMsg, setOpenMsg] = useState(false);
 
 
+  // const [isOnline, setIsOnline] = useState(navigator.onLine);
+  // useEffect(() => {
+  //   function onlineHandler() {
+  //     setIsOnline(true);
+  //   }
+
+
+  //   function offlineHandler() {
+  //     setIsOnline(false);
+  //   }
+
+  //   window.addEventListener("online", onlineHandler);
+  //   window.addEventListener("offline", offlineHandler);
+
+  //   return () => {
+  //     window.removeEventListener("online", onlineHandler);
+  //     window.removeEventListener("offline", offlineHandler);
+  //   };
+  // }, []);
 
   return (
     <>
-      <div className="main">
+      <>
+
         <Navbar setOpen={setOpen} />
         <Main />
         <Kurslar setOpenMsg={setOpenMsg} open={open} setOpen={setOpen} />
         <Corusel />
-      </div>
-      <Features />
-      <Contact setOpenMsg={setOpenMsg} />
-      <Footer />
-      <Call />
-      <Msg openMsg={openMsg} setOpenMsg={setOpenMsg} setOpen={setOpen} />
+        <Features />
+        <Contact setOpenMsg={setOpenMsg} />
+        <Footer />
+        <Call />
+        <Msg openMsg={openMsg} setOpenMsg={setOpenMsg} setOpen={setOpen} />
+      </>
+
     </>
   );
 };
