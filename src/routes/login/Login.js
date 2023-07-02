@@ -53,8 +53,11 @@ function Login() {
         </span>
         <button>Login</button>
         <Link to={"/"} className="login__container__home">
-          <p>Go To Home</p>
+          <p>Bosh Sahifa</p>
         </Link>
+        <div className="login__container__text">
+          <b> ALGORITM EDUCATION CENTER</b>
+        </div>
       </form>
     </div>
 

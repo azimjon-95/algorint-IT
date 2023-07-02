@@ -17,7 +17,7 @@ function Sidebar() {
           <div className="bigSidebar__box">
             <HiOutlineUserCircle onClick={() => setSidebar(true)} />
             <h3 className={`categories_title ${sidebar ? "" : "title_show"}`}>
-              Algoritm
+              Algoritm Ta'lim
             </h3>
             <IoMdClose
               onClick={() => setSidebar(false)}
@@ -35,7 +35,7 @@ function Sidebar() {
           </div>
         )}
         <Link to="/admin" className="bigSidebar__categories">
-          <span>
+          <span className="icoshe">
             <AiFillHome />
           </span>
           <h3 className={`categories_title ${sidebar ? "" : "title_show"}`}>
@@ -44,7 +44,7 @@ function Sidebar() {
         </Link>
         {
           ADMINS_ROUTER?.map(({ icon, path, title }, inx) => <Link key={inx} to={path.slice(1)} className="bigSidebar__categories">
-            <span>
+            <span className="icoshe">
               {icon}
             </span>
             <h3 className={`categories_title ${sidebar ? "" : "title_show"}`}>

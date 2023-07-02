@@ -28,12 +28,13 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
     const [modal4, setModal4] = useState(false);
     const [loading, setLoading] = useState(false)
 
-    const [disabled, setDisabled] = useState("")
+    const [disabled, setDisabled] = useState(false)
 
     const [formData, setFormData] = useState({
         name: "",
         number: "",
         kurs: "",
+        promokod: "",
     });
 
 
@@ -61,9 +62,12 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
         }, 11000)
         setFormData({
             name: "",
-            number: "",
+            number: "+9989",
             kurs: "",
+            promokod: "",
         })
+
+
     }
 
 
@@ -74,9 +78,10 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
                     <p>O`quv kurslar</p>
                 </div>
                 <div className="kusrlar">
-                    <div data-aos="fade-up" className="kusrlar_box-all">
+                    <div className="kusrlar_box-all">
                         <div className="kusrlar_box" >
-                            <img src={It} alt="" />
+                            {/* <img src={It} alt="" /> */}
+                            <h1>Web dasturlash</h1>
                         </div>
                         <div className="kusrlar_box-btn">
                             <button className="regis"
@@ -101,9 +106,10 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
                         </div>
 
                     </div>
-                    <div data-aos="fade-up" className="kusrlar_box-all">
+                    <div className="kusrlar_box-all">
                         <div className="kusrlar_box img2">
-                            <img src={Rus} alt="" />
+                            {/* <img src={Rus} alt="" /> */}
+                            <h1>Rus tili</h1>
                         </div>
                         <div className="kusrlar_box-btn">
                             <button className="regis"
@@ -130,7 +136,8 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
                     </div>
                     <div data-aos="fade-up" className="kusrlar_box-all">
                         <div className="kusrlar_box img3" >
-                            <img src={Eng} alt="" />
+                            {/* <img src={Eng} alt="" /> */}
+                            <h1>Ingilz tili</h1>
                         </div>
 
                         <div className="kusrlar_box-btn">
@@ -158,7 +165,8 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
                     </div>
                     <div data-aos="fade-up" className="kusrlar_box-all">
                         <div className="kusrlar_box" >
-                            <img src={Dtm} alt="" />
+                            {/* <img src={Dtm} alt="" /> */}
+                            <h1>DTM</h1>
                         </div>
                         <div className="kusrlar_box-btn">
                             <button className="regis"
@@ -273,7 +281,7 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
                         placeholder="ism"
                     />
 
-                    <PatternFormat
+                    {/* <PatternFormat
 
                         required
                         format="+998 (##) ### ####"
@@ -283,9 +291,19 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
                         onChange={(e) =>
                             setFormData({ ...formData, number: e.target.value })
                         }
-                    />
+                    /> */}
+                    <input
 
-                    <select
+                        required
+                        value={formData.number}
+
+                        onChange={(e) =>
+                            setFormData({ ...formData, number: e.target.value })
+                        }
+                        type="number"
+                        placeholder="Tel nomer"
+                    />
+                    {/* <select
                         value={formData.kurs}
                         onChange={(e) =>
                             setFormData({ ...formData, kurs: e.target.value })
@@ -293,25 +311,65 @@ const Kurslar = ({ open, setOpen, setOpenMsg }) => {
                         name=""
                         id=""
                     >
-                        <option value="Kursni tanlang">Kursni tanlang</option>
+                        <option value="Kursni tanlang">kursni tanlang</option>
                         <option value="Dasturlash">Dasturlash</option>
                         <option value="Rus-tili">Rus-tili</option>
                         <option value="Ingliz-tili">Ingliz-tili</option>
                         <option value="DTM">DTM</option>
-                    </select>
+                    </select> */}
+                    <div className="Cont_select">
+                        <b>Kursni Tallang</b>
+                        <div className="select_box">
+                            <span>
+                                <label htmlFor="Dasturlash">
+                                    <input onChange={(e) => setFormData({ ...formData, kurs: e.target.value })} type="radio" name="redio" value="Dasturlash" />
+                                    Dasturlash
+                                </label>
+                                <label htmlFor="Rus">
+                                    <input onChange={(e) => setFormData({ ...formData, kurs: e.target.value })} type="radio" name="redio" value="Rus-tili" />
+                                    Rus-tili
+                                </label>
+                            </span>
+                            <span>
+                                <label htmlFor="Ingliz">
+                                    <input onChange={(e) => setFormData({ ...formData, kurs: e.target.value })} type="radio" name="redio" value="Ingliz-tili" />
+                                    Ingliz-tili
+                                </label>
+                                <label htmlFor="DTM">
+                                    <input onChange={(e) => setFormData({ ...formData, kurs: e.target.value })} type="radio" name="redio" value="DTM" />
+                                    DTM
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* 
+                    <input
+                        value={formData.promokod}
+                        onChange={(e) =>
+                            setFormData({ ...formData, promokod: e.target.value })
+                        }
+                        type="number"
+                        placeholder="promokodni kiriting"
+                    /> */}
 
 
+                    {
+                        formData.number == 0 || formData.name === '' || formData.kurs === '' ?
+                            <button className="loading-spinner-button">So‘rov yuborish</button>
+                            :
+                            <LoadingSpinnerButton loading={loading} onClick={() => {
+                                setLoading(true)
+                                localStorage.setItem("usern", formData.name)
+                                setTimeout(() => {
+                                    setLoading(false)
+                                    setOpen(false)
 
+                                }, 2000)
+                            }} />
 
-                    <LoadingSpinnerButton formData={disabled} loading={loading} onClick={() => {
-                        setLoading(true)
-                        localStorage.setItem("usern", formData.name)
-                        setTimeout(() => {
-                            setLoading(false)
-                            setOpen(false)
+                    }
 
-                        }, 2000)
-                    }} />
                 </form>
             </div>
         </>

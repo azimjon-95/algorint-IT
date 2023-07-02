@@ -9,13 +9,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Home /> */}
       <Routes>
         {
           auth ?
-            <Route path='/admin' element={<Navigate replace to={"/login"} />} />
-            :
             <Route path='/login' element={<Navigate replace to={"/admin"} />} />
+            :
+            <Route path='/admin' element={<Navigate replace to={"/login"} />} />
         }
         <Route path='/' element={<Home />} />
         <Route path='/admin/*' element={<Admin />} />

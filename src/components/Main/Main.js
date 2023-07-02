@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import video from "../../asets/video/video.mp4";
+import { videoData } from '../../utils/videoData'
 import "./main.css";
 
 import Aos from "aos";
@@ -71,7 +71,10 @@ export const Main = () => {
         <p className="logo_title top_left"> o‘rganing</p>
 
         <div className="video">
-          <video src={video} autoPlay controls muted loop></video>
+          {
+            videoData?.map((value, inx) => <video key={inx} src={value.videoBaner} autoPlay controls muted loop></video>)
+          }
+
         </div>
       </div>
     </div>

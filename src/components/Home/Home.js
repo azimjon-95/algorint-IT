@@ -10,6 +10,7 @@ import Kurslar from "../Kurslar/Kurslar";
 import Contact from "../contact/Contact";
 import Call from "../msg/Call";
 import Msg from "../msg/Msg";
+import Register from "../Register/Register";
 
 
 export const Home = () => {
@@ -43,6 +44,7 @@ export const Home = () => {
 
         <Navbar setOpen={setOpen} />
         <Main />
+        <Register setOpen={setOpen} />
         <Kurslar setOpenMsg={setOpenMsg} open={open} setOpen={setOpen} />
         <Corusel />
         <Features />

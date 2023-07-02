@@ -1,5 +1,4 @@
-.readadmins_container
-{
+.readadmins_container {
     width: 65%;
     height: 590px;
     background: #fff;
@@ -8,83 +7,122 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding: 10px; 
+    padding: 10px;
     padding-right: 0;
 }
-.readadmins_container_title
-{
+
+.readadmins_container_title {
     font-size: 25px;
     font-weight: 500;
     color: #00006d;
 }
-.readadmins_gridcont
-{
+
+.readadmins_gridcont {
     width: 100%;
     height: 510px;
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
 }
-.admins_card
-{
-    width: 31.3%;
-    height: 350px;
+
+.admins_card {
+    width: 210px;
+    height: 320px;
     background: #fff;
     margin-bottom: 10px;
     margin-right: 15px;
     position: relative;
     border-radius: 8px;
-    padding: 20px 10px;
-    border: 2px solid #ddd;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.admin_imgcont
-{
-    width: 120px;
-    height: 120px;
-    background: dodgerblue;
-    margin-bottom: 10px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%; 
+
+.admin_imgcont {
+    width: 80px;
+    height: 80px;
+    background: rgb(255, 255, 255);
+    border: 1px solid grey;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 80px;
-    font-weight: 700;
+    font-size: 35px;
+    font-weight: 500;
     cursor: pointer;
 }
-.admins_name
-{
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
+
+.admin_imgcont>svg {
+    font-size: 45px;
 }
-.admins_collection
-{
+
+.admins_name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.admins_collection {
     list-style: none;
     font-weight: 500;
     font-size: 15px;
+    position: relative;
 }
-.admins_item
-{
+
+.admins_item {
     margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
 }
-.admins_delete
-{
+
+.admins_item>i {
+    margin-left: 4px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+
+}
+
+.admins_collection>button {
     position: absolute;
-    bottom: 5px;
-    font-size: 22px;
-    color: red;
-    right: 65px;
+    right: -2px;
+    bottom: 23px;
+    border: none;
+    background-color: transparent;
+}
+
+.admins_item>i>b {
+    font-size: 14px;
+    color: rgb(166, 166, 166);
+}
+
+.controls_btn {
+    width: 100%;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls_btn>button {
+    padding: 0 15px;
+    height: 22px;
+    border: none;
+    font-size: 14px;
+    border-radius: 50px;
+    color: #fff;
     cursor: pointer;
 }
-.admins_edit
-{
-    position: absolute;
-    bottom: 3px;
-    font-size: 25px;
-    color: green;
-    right: 15px;
-    cursor: pointer;
+
+.controls_btn>button:nth-child(1) {
+    background-color: red;
+}
+
+.controls_btn>button:nth-child(2) {
+    background-color: rgb(85, 255, 0);
 }

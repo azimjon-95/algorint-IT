@@ -3,6 +3,7 @@ import { LOG_IN, LOG_OUT } from './action/actionTypes'
 let userStorage = JSON.parse(localStorage.getItem("user"))
 export const initialState = {
     auth: userStorage ? userStorage : null
+    // auth: userStorage ? userStorage : userStorage
 }
 
 const reducer = (state, action) => {

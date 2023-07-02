@@ -87,13 +87,17 @@ export const Contact = ({ setOpenMsg }) => {
               setFormData({ ...formData, savol: e.target.value })
             } name="" id="" cols="30" rows="4"></textarea>
 
-          <LoadingSpinnerButton disable={formData} loading={loading} onClick={() => {
-            setLoading(true)
-            setTimeout(() => {
-              setLoading(false)
+          {
+            formData.number == 0 || formData.savol === '' || formData.ism === '' ? <button className="loading-spinner-button">So‘rov yuborish</button> :
 
-            }, 2000)
-          }} />
+              <LoadingSpinnerButton disable={formData} loading={loading} onClick={() => {
+                setLoading(true)
+                setTimeout(() => {
+                  setLoading(false)
+
+                }, 2000)
+              }} />
+          }
         </form>
       </div>
     </div>
